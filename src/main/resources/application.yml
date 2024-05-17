@@ -1,0 +1,23 @@
+server:
+  port: 11230
+
+spring:
+  thymeleaf:
+    cache: false
+    prefix: classpath:/web/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
+  resources:
+    chain:
+      strategy:
+        content:
+          enabled: true
+          paths: /**
+
+minio:
+  endpoint: http://192.168.78.101:9001
+  accessKey: admin
+  secretKey: 12345678
+  bucketName: weiz-test
